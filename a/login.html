@@ -1,0 +1,245 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Đăng Nhập - MiuCos Store</title>
+
+    <!-- Google Fonts: Quicksand -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Quicksand:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+
+    <!-- Bootstrap 5 CSS CDN -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <!-- FontAwesome cho Icon -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <!-- File CSS dùng chung cho mọi trang -->
+    <link rel="stylesheet" href="style.css">
+</head>
+<body class="d-flex flex-column min-vh-100">
+
+    <header class="site-header sticky-top bg-white border-bottom shadow-sm">
+
+        <div class="top-header-bar py-2 border-bottom">
+            <div class="container d-flex align-items-center justify-content-between gap-3">
+
+                <a class="navbar-brand fw-bold text-dark fs-4 d-flex align-items-center m-0" href="index.html">
+                    <img src="image/logodoanweb.png" alt="MiuCos Logo" class="navbar-logo-img">
+                </a>
+
+                <div class="header-search-container flex-grow-1 mx-lg-4">
+                    <form class="w-100" role="search" onsubmit="return false;">
+                        <div class="search-box-wrapper mx-auto">
+                            <div class="search-inner-container">
+                                <input class="search-input-inner" type="search" placeholder="Tìm kiếm trang phục, nhân vật, phụ kiện, wig, đạo cụ..." aria-label="Tìm kiếm sản phẩm">
+                                <button class="search-btn-icon" type="submit" aria-label="Tìm kiếm">
+                                    <i class="fa-solid fa-magnifying-glass"></i>
+                                </button>
+                            </div>
+                        </div>
+                    </form>
+                </div>
+
+                <div class="d-flex align-items-center gap-2 flex-shrink-0">
+                    <button class="btn btn-outline-dark btn-sm px-3 rounded-pill"><i class="fa-solid fa-user me-1"></i> Đăng Nhập</button>
+                    <button class="btn btn-pink-accent btn-sm px-3 rounded-pill">Khu Vực Đối Tác</button>
+                </div>
+
+            </div>
+        </div>
+
+        <nav class="navbar navbar-expand-lg navbar-light py-2">
+            <div class="container justify-content-center">
+                <div class="navbar-collapse justify-content-center">
+                                                            <ul class="navbar-nav">
+
+                        <li class="nav-item">
+                            <a class="nav-link" href="index.html">Trang Chủ</a>
+                        </li>
+                        <li class="nav-item dropdown">
+                            <a class="nav-link dropdown-toggle" href="rent-category.html" id="rentDropdown" role="button">Thuê Trang Phục</a>
+                            <ul class="dropdown-menu" aria-labelledby="rentDropdown">
+                                <li><a class="dropdown-item fw-bold" href="rent-category.html">Xem tất cả <i class="fa-solid fa-arrow-right ms-1"></i></a></li>
+                                <li><hr class="dropdown-divider"></li>
+                                <li><a class="dropdown-item" href="rent-anime.html"><i class="fa-solid fa-fire text-danger me-2"></i>Thuê Cosplay Anime 'Hot'</a></li>
+                                <li><a class="dropdown-item" href="rent-co-trang.html"><i class="fa-solid fa-fan me-2" style="color: #9c27b0;"></i>Thuê Trang Phục Cổ Trang</a></li>
+                                <li><a class="dropdown-item" href="rent-truyen-thong.html"><i class="fa-solid fa-shirt me-2" style="color: #ff9800;"></i>Truyền Thống Việt Nam</a></li>
+                                <li><a class="dropdown-item" href="rent-concert.html"><i class="fa-solid fa-compact-disc me-2" style="color: var(--mint-primary);"></i>Concert / Sự Kiện</a></li>
+                            </ul>
+                        </li>
+                        <li class="nav-item dropdown">
+                            <a class="nav-link dropdown-toggle" href="buy-category.html" id="buyDropdown" role="button">Mua Trang Phục</a>
+                            <ul class="dropdown-menu" aria-labelledby="buyDropdown">
+                                <li><a class="dropdown-item fw-bold" href="buy-category.html">Xem tất cả <i class="fa-solid fa-arrow-right ms-1"></i></a></li>
+                                <li><hr class="dropdown-divider"></li>
+                                <li><a class="dropdown-item" href="buy-cosplay.html"><i class="fa-solid fa-mask text-danger me-2"></i>Trang Phục Cosplay</a></li>
+                                <li><a class="dropdown-item" href="buy-co-trang.html"><i class="fa-solid fa-fan me-2" style="color: #9c27b0;"></i>Trang Phục Cổ Trang</a></li>
+                                <li><a class="dropdown-item" href="buy-truyen-thong.html"><i class="fa-solid fa-shirt me-2" style="color: #ff9800;"></i>Truyền Thống Việt Nam</a></li>
+                                <li><a class="dropdown-item" href="buy-concert.html"><i class="fa-solid fa-compact-disc me-2" style="color: var(--mint-primary);"></i>Concert / Sự Kiện</a></li>
+                            </ul>
+                        </li>
+                        <li class="nav-item dropdown">
+                            <a class="nav-link dropdown-toggle" href="accessory-category.html" id="accDropdown" role="button">Phụ Kiện</a>
+                            <ul class="dropdown-menu" aria-labelledby="accDropdown">
+                                <li><a class="dropdown-item fw-bold" href="accessory-category.html">Xem tất cả <i class="fa-solid fa-arrow-right ms-1"></i></a></li>
+                                <li><hr class="dropdown-divider"></li>
+                                <li><a class="dropdown-item" href="acc-dao-cu.html"><i class="fa-solid fa-shield-halved text-danger me-2"></i>Đạo Cụ Vũ Khí</a></li>
+                                <li><a class="dropdown-item" href="acc-trang-suc.html"><i class="fa-solid fa-gem me-2" style="color: #e91e63;"></i>Trang Sức</a></li>
+                                <li><a class="dropdown-item" href="acc-wig.html"><i class="fa-solid fa-user-astronaut me-2" style="color: #9c27b0;"></i>Wig (Tóc Giả)</a></li>
+                                <li><a class="dropdown-item" href="acc-non-mu.html"><i class="fa-solid fa-hat-cowboy me-2" style="color: #ff9800;"></i>Nón / Mũ</a></li>
+                                <li><a class="dropdown-item" href="acc-giay.html"><i class="fa-solid fa-shoe-prints me-2" style="color: #4caf50;"></i>Giày / Dép / Tất</a></li>
+                            </ul>
+                        </li>
+
+                        <li class="nav-item">
+                            <a class="nav-link" href="community-feed.html">Cộng Đồng Feed</a>
+                        </li>
+
+                    </ul>
+                </div>
+            </div>
+        </nav>
+    </header>
+
+    <main class="flex-grow-1">
+
+        <section class="container login-wrap">
+            <div class="row justify-content-center">
+                <div class="col-sm-10 col-md-7 col-lg-5">
+
+                    <div class="card card-custom login-card">
+
+                        <div class="text-center mb-3">
+                            <!-- ẢNH: image/logodoanweb.png -->
+                            <img src="image/logodoanweb.png" alt="MiuCos Logo" class="login-logo mb-3">
+                            <h1 class="login-title" id="loginTitle">Chào Mừng Trở Lại</h1>
+                            <p class="login-subtitle" id="loginSubtitle">Đăng nhập để thuê, mua và chia sẻ cùng MiuCos</p>
+                        </div>
+
+                        <!-- Chọn vai trò: khách hàng hoặc đối tác cho thuê -->
+                        <div class="login-tabs" role="tablist" aria-label="Loại tài khoản">
+                            <button type="button" class="login-tab is-active" role="tab" data-role="customer" aria-selected="true">Khách hàng</button>
+                            <button type="button" class="login-tab" role="tab" data-role="partner" aria-selected="false">Đối tác cho thuê</button>
+                        </div>
+
+                        <form id="loginForm" novalidate>
+
+                            <div class="login-field mb-3">
+                                <label for="loginAccount" class="form-label fw-semibold">Email hoặc số điện thoại</label>
+                                <input id="loginAccount" name="account" type="text" class="form-control login-input" autocomplete="username" required>
+                                <div class="login-feedback">Vui lòng nhập email hoặc số điện thoại.</div>
+                            </div>
+
+                            <div class="login-field mb-3">
+                                <label for="loginPassword" class="form-label fw-semibold">Mật khẩu</label>
+                                <div class="input-group">
+                                    <input id="loginPassword" name="password" type="password" class="form-control login-input login-input-pw" autocomplete="current-password" minlength="6" required>
+                                    <button class="btn login-eye" type="button" id="togglePassword" aria-label="Hiện mật khẩu" aria-pressed="false">
+                                        <i class="fa-regular fa-eye" aria-hidden="true"></i>
+                                    </button>
+                                </div>
+                                <div class="login-feedback">Mật khẩu tối thiểu 6 ký tự.</div>
+                            </div>
+
+                            <!-- Chỉ hiện khi chọn Đối tác cho thuê -->
+                            <div class="login-field mb-3" id="partnerBlock" hidden>
+                                <label for="partnerCode" class="form-label fw-semibold">Mã đối tác cho thuê</label>
+                                <input id="partnerCode" name="partnerCode" type="text" class="form-control login-input text-uppercase" placeholder="Ví dụ: MCP2026XYZ" autocomplete="off" maxlength="12">
+                                <div class="login-feedback">Mã đối tác gồm 6 đến 12 chữ hoặc số, không dấu.</div>
+                            </div>
+
+                            <!-- Mã xác nhận (captcha) -->
+                            <div class="login-field mb-4">
+                                <label for="captchaInput" class="form-label fw-semibold">Mã xác nhận</label>
+                                <div class="captcha-row">
+                                    <canvas id="captchaCanvas" width="170" height="54" class="captcha-canvas" role="img" aria-label="Mã xác nhận gồm 5 ký tự, nhấn để đổi mã"></canvas>
+                                    <button type="button" id="captchaRefresh" class="btn captcha-refresh" aria-label="Đổi mã xác nhận">
+                                        <i class="fa-solid fa-rotate-right" aria-hidden="true"></i>
+                                    </button>
+                                </div>
+                                <input id="captchaInput" type="text" class="form-control login-input mt-2" placeholder="Nhập 5 ký tự trong hình" autocomplete="off" maxlength="5">
+                                <div class="login-feedback">Mã xác nhận chưa đúng, vui lòng nhập lại.</div>
+                            </div>
+
+                            <div class="d-flex justify-content-between align-items-center flex-wrap gap-2 mb-4 small">
+                                <div class="form-check m-0">
+                                    <input class="form-check-input" type="checkbox" id="rememberMe">
+                                    <label class="form-check-label" for="rememberMe">Ghi nhớ đăng nhập</label>
+                                </div>
+                                <a href="#" class="section-more fw-semibold">Quên mật khẩu?</a>
+                            </div>
+
+                            <button type="submit" class="btn btn-pink-accent w-100 py-2 fw-bold login-submit" id="loginSubmit">Đăng Nhập</button>
+                        </form>
+
+                        <div class="login-divider"><span>hoặc</span></div>
+
+                        <div class="d-grid gap-2">
+                            <button type="button" class="btn social-btn"><i class="fa-brands fa-google me-2" aria-hidden="true"></i>Tiếp tục với Google</button>
+                            <button type="button" class="btn social-btn"><i class="fa-brands fa-facebook me-2" aria-hidden="true"></i>Tiếp tục với Facebook</button>
+                        </div>
+
+                        <p class="text-center small mt-4 mb-0">
+                            Chưa có tài khoản? <a href="#" class="section-more fw-bold">Đăng ký ngay</a>
+                        </p>
+
+                    </div>
+
+                </div>
+            </div>
+        </section>
+
+    </main>
+
+    <footer class="footer-soft mt-auto">
+        <div class="container">
+            <div class="row g-4">
+
+                <div class="col-lg-4 col-md-6">
+                    <div class="d-flex align-items-center gap-2 mb-3">
+                        <img src="image/logodoanweb.png" alt="MiuCos Logo" class="footer-logo-img">
+                        <span class="fs-4 fw-bold text-dark">MiuCos Store</span>
+                    </div>
+                    <p class="small text-secondary mb-3">
+                        Hệ thống nền tảng kết nối cho thuê và mua bán trang phục Cosplay, Concert, Cổ trang và Sự kiện hàng đầu dành cho giới trẻ.
+                    </p>
+                </div>
+
+                <div class="col-lg-4 col-md-6">
+                    <h5 class="fw-bold mb-3 border-bottom border-2 pb-2" style="width: fit-content; border-color: var(--pink-accent) !important;">Chính Sách & Hỗ Trợ</h5>
+                    <ul class="list-unstyled small d-flex flex-column gap-2 mb-0">
+                        <li><a href="#"><i class="fa-solid fa-angle-right me-2 text-mint"></i>Quy định thuê đồ & Đặt cọc</a></li>
+                        <li><a href="#"><i class="fa-solid fa-angle-right me-2 text-mint"></i>Hướng dẫn đo Size chuẩn</a></li>
+                        <li><a href="#"><i class="fa-solid fa-angle-right me-2 text-mint"></i>Chính sách dành cho Đối tác gian hàng</a></li>
+                        <li><a href="#"><i class="fa-solid fa-angle-right me-2 text-mint"></i>Câu hỏi thường gặp (FAQ)</a></li>
+                    </ul>
+                </div>
+
+                <div class="col-lg-4 col-md-12">
+                    <h5 class="fw-bold mb-3 border-bottom border-2 pb-2" style="width: fit-content; border-color: var(--pink-accent) !important;">Kết Nối Với MiuCos</h5>
+                    <div class="d-flex gap-3 mb-3">
+                        <a href="#" class="footer-social-icon" title="Facebook" aria-label="Facebook"><i class="fa-brands fa-facebook"></i></a>
+                        <a href="#" class="footer-social-icon" title="Instagram" aria-label="Instagram"><i class="fa-brands fa-instagram"></i></a>
+                        <a href="#" class="footer-social-icon" title="TikTok" aria-label="TikTok"><i class="fa-brands fa-tiktok"></i></a>
+                    </div>
+                    <p class="small text-secondary mb-0">
+                        <i class="fa-solid fa-headset me-2 text-pink"></i>Hotline hỗ trợ: <strong class="text-dark">09xx-xxx-xxx</strong>
+                    </p>
+                </div>
+
+            </div>
+
+            <hr class="my-4" style="border-color: #cbd5e1;">
+
+            <div class="text-center small text-muted">
+                © 2026 MiuCos Store - Đồ án thiết kế trang web thương mại điện tử cho thuê trang phục.
+            </div>
+        </div>
+    </footer>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+    <!-- Hiệu ứng dùng chung -->
+    <script src="script.js"></script>
+</body>
+</html>

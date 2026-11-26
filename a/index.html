@@ -1,0 +1,687 @@
+<!--
+==========================================================
+DANH SÁCH ẢNH CẦN CHÈN (đặt vào thư mục image/ với đúng tên dưới đây)
+----------------------------------------------------------
+BANNER (3 slide, ảnh ngang khoảng 1600 x 600 px):
+  - image/banner-1.jpg          slide 1: Tỏa Sáng Tại Mọi Sân Khấu
+  - image/banner-2.jpg          slide 2: Trở Thành Đối Tác
+  - image/banner-3.jpg          slide 3: Concert & Sự Kiện
+
+TRANG PHỤC MỚI CẬP NHẬT (4 sản phẩm, ảnh vuông hoặc đứng khoảng 800 x 800 px):
+  - image/furina.jpg            Cosplay Furina
+  - image/outfit-concert.jpg    Outfit Concert Ánh Sáng Mùa Hè
+  - image/ayaka.jpg             Cosplay Kamisato Ayaka
+  - image/ao-dai.jpg            Áo Dài Cách Tân Họa Tiết Hoa Sen
+
+THUÊ TRANG PHỤC (6 sản phẩm, ảnh đứng 3:4, ví dụ 600 x 800 px):
+  - image/thue-hu-tao.jpg, thue-raiden.jpg, thue-han-phuc.jpg,
+    thue-ao-dai-do.jpg, thue-concert-neon.jpg, thue-nahida.jpg
+
+MUA TRANG PHỤC (6 sản phẩm, ảnh đứng 3:4):
+  - image/mua-zhongli.jpg, mua-ao-khoac-concert.jpg, mua-ao-dai-cuoi.jpg,
+    mua-co-trang.jpg, mua-idol.jpg, mua-hanbok.jpg
+
+PHỤ KIỆN HÓA TRANG (6 sản phẩm, ảnh đứng 3:4):
+  - image/phukien-wig-bach-kim.jpg, phukien-kiem.jpg, phukien-kinh.jpg,
+    phukien-vong-co.jpg, phukien-mu-phu-thuy.jpg, phukien-giay.jpg
+
+CỘNG ĐỒNG FEED (ảnh đăng trong bài viết, tỉ lệ ngang khoảng 1200 x 800 px):
+  - image/feed-concert-linh.jpg     Bài của Linh Cosplay (đi concert)
+  - image/feed-ao-dai-thao.jpg      Bài của Thảo Anh (review áo dài)
+  (Bài của Hoàng Nam không có ảnh.)
+
+AVATAR NGƯỜI DÙNG: hiện đang dùng chữ cái đầu tên làm avatar. Muốn dùng ảnh thật,
+thay thẻ <div class="avatar-circle"> bằng <img src="image/ten-file.jpg" class="avatar-img">.
+
+LOGO:
+  - image/logodoanweb.png
+==========================================================
+-->
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>MiuCos - Thuê & Bán Trang Phục Cosplay, Concert</title>
+
+    <!-- Google Fonts: Quicksand -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Quicksand:wght@400;500;600;700&display=swap" rel="stylesheet">
+
+    <!-- Bootstrap 5 CSS CDN -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <!-- FontAwesome cho Icon -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <!-- File CSS Tùy Chỉnh Riêng -->
+    <link rel="stylesheet" href="style.css">
+
+</head>
+<body class="d-flex flex-column min-vh-100">
+
+    <!-- HEADER & NAVBAR 2 TẦNG -->
+    <header class="site-header sticky-top bg-white border-bottom shadow-sm">
+
+        <!-- TẦNG 1: LOGO, THANH TÌM KIẾM, NÚT TÀI KHOẢN -->
+        <div class="top-header-bar py-2 border-bottom">
+            <div class="container d-flex align-items-center justify-content-between gap-3">
+
+                <a class="navbar-brand fw-bold text-dark fs-4 d-flex align-items-center m-0" href="index.html">
+                    <!-- ẢNH: image/logodoanweb.png -->
+                    <img src="image/logodoanweb.png" alt="MiuCos Logo" class="navbar-logo-img">
+                </a>
+
+                <div class="header-search-container flex-grow-1 mx-lg-4">
+                    <form class="w-100" role="search" onsubmit="return false;">
+                        <div class="search-box-wrapper mx-auto">
+                            <div class="search-inner-container">
+                                <input class="search-input-inner" type="search" placeholder="Tìm kiếm trang phục, nhân vật, phụ kiện, wig, đạo cụ..." aria-label="Tìm kiếm sản phẩm">
+                                <button class="search-btn-icon" type="submit" aria-label="Tìm kiếm">
+                                    <i class="fa-solid fa-magnifying-glass"></i>
+                                </button>
+                            </div>
+                        </div>
+                    </form>
+                </div>
+
+                <div class="d-flex align-items-center gap-2 flex-shrink-0">
+                    <a href="login.html" class="btn btn-outline-dark btn-sm px-3 rounded-pill"><i class="fa-solid fa-user me-1"></i> Đăng Nhập</a>
+                    <a href="login.html?role=partner" class="btn btn-pink-accent btn-sm px-3 rounded-pill">Khu Vực Đối Tác</a>
+                </div>
+
+            </div>
+        </div>
+
+        <!-- TẦNG 2: MENU ĐIỀU HƯỚNG -->
+        <nav class="navbar navbar-expand-lg navbar-light py-2">
+            <div class="container justify-content-center">
+                <div class="navbar-collapse justify-content-center">
+                                                                                                    <ul class="navbar-nav">
+
+                        <li class="nav-item">
+                            <a class="nav-link active" href="index.html" aria-current="page">Trang Chủ</a>
+                        </li>
+                        <li class="nav-item dropdown">
+                            <a class="nav-link dropdown-toggle" href="rent-category.html" id="rentDropdown" role="button">Thuê Trang Phục</a>
+                            <ul class="dropdown-menu" aria-labelledby="rentDropdown">
+                                <li><a class="dropdown-item fw-bold" href="rent-category.html">Xem tất cả <i class="fa-solid fa-arrow-right ms-1"></i></a></li>
+                                <li><hr class="dropdown-divider"></li>
+                                <li><a class="dropdown-item" href="rent-anime.html"><i class="fa-solid fa-fire text-danger me-2"></i>Thuê Cosplay Anime 'Hot'</a></li>
+                                <li><a class="dropdown-item" href="rent-co-trang.html"><i class="fa-solid fa-fan me-2" style="color: #9c27b0;"></i>Thuê Trang Phục Cổ Trang</a></li>
+                                <li><a class="dropdown-item" href="rent-truyen-thong.html"><i class="fa-solid fa-shirt me-2" style="color: #ff9800;"></i>Truyền Thống Việt Nam</a></li>
+                                <li><a class="dropdown-item" href="rent-concert.html"><i class="fa-solid fa-compact-disc me-2" style="color: var(--mint-primary);"></i>Concert / Sự Kiện</a></li>
+                            </ul>
+                        </li>
+                        <li class="nav-item dropdown">
+                            <a class="nav-link dropdown-toggle" href="buy-category.html" id="buyDropdown" role="button">Mua Trang Phục</a>
+                            <ul class="dropdown-menu" aria-labelledby="buyDropdown">
+                                <li><a class="dropdown-item fw-bold" href="buy-category.html">Xem tất cả <i class="fa-solid fa-arrow-right ms-1"></i></a></li>
+                                <li><hr class="dropdown-divider"></li>
+                                <li><a class="dropdown-item" href="buy-cosplay.html"><i class="fa-solid fa-mask text-danger me-2"></i>Trang Phục Cosplay</a></li>
+                                <li><a class="dropdown-item" href="buy-co-trang.html"><i class="fa-solid fa-fan me-2" style="color: #9c27b0;"></i>Trang Phục Cổ Trang</a></li>
+                                <li><a class="dropdown-item" href="buy-truyen-thong.html"><i class="fa-solid fa-shirt me-2" style="color: #ff9800;"></i>Truyền Thống Việt Nam</a></li>
+                                <li><a class="dropdown-item" href="buy-concert.html"><i class="fa-solid fa-compact-disc me-2" style="color: var(--mint-primary);"></i>Concert / Sự Kiện</a></li>
+                            </ul>
+                        </li>
+                        <li class="nav-item dropdown">
+                            <a class="nav-link dropdown-toggle" href="accessory-category.html" id="accDropdown" role="button">Phụ Kiện</a>
+                            <ul class="dropdown-menu" aria-labelledby="accDropdown">
+                                <li><a class="dropdown-item fw-bold" href="accessory-category.html">Xem tất cả <i class="fa-solid fa-arrow-right ms-1"></i></a></li>
+                                <li><hr class="dropdown-divider"></li>
+                                <li><a class="dropdown-item" href="acc-dao-cu.html"><i class="fa-solid fa-shield-halved text-danger me-2"></i>Đạo Cụ Vũ Khí</a></li>
+                                <li><a class="dropdown-item" href="acc-trang-suc.html"><i class="fa-solid fa-gem me-2" style="color: #e91e63;"></i>Trang Sức</a></li>
+                                <li><a class="dropdown-item" href="acc-wig.html"><i class="fa-solid fa-user-astronaut me-2" style="color: #9c27b0;"></i>Wig (Tóc Giả)</a></li>
+                                <li><a class="dropdown-item" href="acc-non-mu.html"><i class="fa-solid fa-hat-cowboy me-2" style="color: #ff9800;"></i>Nón / Mũ</a></li>
+                                <li><a class="dropdown-item" href="acc-giay.html"><i class="fa-solid fa-shoe-prints me-2" style="color: #4caf50;"></i>Giày / Dép / Tất</a></li>
+                            </ul>
+                        </li>
+
+                        <li class="nav-item">
+                            <a class="nav-link" href="community-feed.html">Cộng Đồng Feed</a>
+                        </li>
+
+                    </ul>
+                </div>
+            </div>
+        </nav>
+    </header>
+
+    <main class="flex-grow-1">
+
+        <!-- BANNER / SLIDER -->
+        <div class="container my-3">
+            <div id="heroCarousel" class="carousel slide hero-carousel shadow-sm" data-bs-ride="carousel">
+
+                <div class="carousel-indicators">
+                    <button type="button" data-bs-target="#heroCarousel" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
+                    <button type="button" data-bs-target="#heroCarousel" data-bs-slide-to="1" aria-label="Slide 2"></button>
+                    <button type="button" data-bs-target="#heroCarousel" data-bs-slide-to="2" aria-label="Slide 3"></button>
+                </div>
+
+                <div class="carousel-inner">
+
+                    <!-- Slide 1 -->
+                    <!-- ẢNH NỀN: image/banner-1.jpg. --g1, --g2 là độ đậm của lớp gradient -->
+                    <div class="carousel-item active">
+                        <div class="hero-slide"
+                             style="--g1: rgba(78, 205, 196, 0.55); --g2: rgba(255, 158, 170, 0.5); --hero-img: url('image/banner-1.jpg');">
+                            <h1>Tỏa Sáng Tại Mọi Sân Khấu & Lễ Hội</h1>
+                            <p class="lead">Dịch vụ cho thuê & bán trang phục Cosplay, Concert hàng đầu với MiuCos!</p>
+                            <a href="#productSection" class="btn btn-light fw-bold text-dark px-4 py-2 mt-2">Khám Phá Khai Trương</a>
+                        </div>
+                    </div>
+
+                    <!-- Slide 2 -->
+                    <!-- ẢNH NỀN: image/banner-2.jpg -->
+                    <div class="carousel-item">
+                        <div class="hero-slide"
+                             style="--g1: rgba(255, 158, 170, 0.55); --g2: rgba(108, 92, 231, 0.45); --hero-img: url('image/banner-2.jpg');">
+                            <h1>Trở Thành Đối Tác Cho Thuê Cùng MiuCos</h1>
+                            <p class="lead">Đăng ký gian hàng riêng, đăng bài quảng cáo sản phẩm hoàn toàn miễn phí!</p>
+                            <button class="btn btn-light fw-bold text-dark px-4 py-2 mt-2">Đăng Ký Gian Hàng</button>
+                        </div>
+                    </div>
+
+                    <!-- Slide 3: Hạng mục Concert & Sự kiện -->
+                    <!-- ẢNH NỀN: image/banner-3.jpg -->
+                    <div class="carousel-item">
+                        <div class="hero-slide"
+                             style="--g1: rgba(78, 205, 196, 0.5); --g2: rgba(108, 92, 231, 0.42); --hero-img: url('image/banner-3.jpg');">
+                            <span class="badge badge-mint mb-3 px-3 py-2"><i class="fa-solid fa-compact-disc me-1"></i> Hạng mục nổi bật</span>
+                            <h1>Concert & Sự Kiện Đang Lên Sóng</h1>
+                            <p class="lead">Outfit ánh kim, áo khoác phát sáng và phụ kiện lightstick cho mọi buổi concert.</p>
+                            <a href="rent-category.html#concert" class="btn btn-light fw-bold text-dark px-4 py-2 mt-2">Xem Concert Ngay</a>
+                        </div>
+                    </div>
+
+                </div>
+
+                <button class="carousel-control-prev" type="button" data-bs-target="#heroCarousel" data-bs-slide="prev">
+                    <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                    <span class="visually-hidden">Trang trước</span>
+                </button>
+                <button class="carousel-control-next" type="button" data-bs-target="#heroCarousel" data-bs-slide="next">
+                    <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                    <span class="visually-hidden">Trang sau</span>
+                </button>
+            </div>
+        </div>
+
+        <!-- THANH LỌC CHỦ ĐỀ NHANH (TAGS) -->
+        <div class="container mb-4">
+            <div class="d-flex gap-2 overflow-auto py-2">
+                <span class="badge bg-white text-dark border p-2 px-3 rounded-pill shadow-sm"><i class="fa-solid fa-fire text-danger me-1"></i> #CosplayAnimeHot</span>
+                <span class="badge bg-white text-dark border p-2 px-3 rounded-pill shadow-sm"><i class="fa-solid fa-music text-primary me-1"></i> #ConcertAnhTrai</span>
+                <span class="badge bg-white text-dark border p-2 px-3 rounded-pill shadow-sm"><i class="fa-solid fa-fan me-1" style="color: #9c27b0;"></i> #CoTrangTrungHoa</span>
+                <span class="badge bg-white text-dark border p-2 px-3 rounded-pill shadow-sm"><i class="fa-solid fa-heart text-danger me-1"></i> #AoDaiTruyenThong</span>
+                <span class="badge bg-white text-dark border p-2 px-3 rounded-pill shadow-sm"><i class="fa-solid fa-mask me-1" style="color: #ff9800;"></i> #GenshinImpact</span>
+            </div>
+        </div>
+
+        <!-- KHU VỰC CHÍNH: SẢN PHẨM MỚI & BẢN TIN -->
+        <div class="container my-4" id="productSection">
+            <div class="row">
+
+                <!-- Cột trái: sản phẩm -->
+                <div class="col-lg-8">
+                    <div class="d-flex justify-content-between align-items-center mb-3">
+                        <h4 class="fw-bold text-secondary mb-0"><i class="fa-solid fa-shirt"></i> Trang Phục Mới Cập Nhật 🔥🔥</h4>
+                        <a href="#" class="text-decoration-none small fw-bold section-more">Xem tất cả <i class="fa-solid fa-arrow-right"></i></a>
+                    </div>
+
+                    <div class="row g-3">
+
+                        <div class="col-md-6">
+                            <div class="card card-custom h-100">
+                                <!-- ẢNH: image/furina.jpg -->
+                                <img src="image/furina.jpg" class="card-img-top product-img" alt="Trang phục cosplay Furina">
+                                <div class="card-body">
+                                    <span class="badge badge-pink badge-pulse mb-2">Cho Thuê & Bán</span>
+                                    <h5 class="card-title fw-bold fs-6">Cosplay Anime - Genshin Impact (Furina)</h5>
+                                    <p class="text-muted small mb-2">Giá thuê: <strong>150.000đ/ngày</strong> | Cọc: 500.000đ</p>
+                                    <a href="product-detail.html?sp=furina" class="btn btn-mint btn-sm w-100"><i class="fa-solid fa-eye"></i> Xem Chi Tiết & Thuê</a>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="col-md-6">
+                            <div class="card card-custom h-100">
+                                <!-- ẢNH: image/outfit-concert.jpg -->
+                                <img src="image/outfit-concert.jpg" class="card-img-top product-img" alt="Outfit concert Ánh Sáng Mùa Hè">
+                                <div class="card-body">
+                                    <span class="badge bg-success mb-2">Chỉ Bán</span>
+                                    <h5 class="card-title fw-bold fs-6">Outfit Concert Ánh Sáng Mùa Hè</h5>
+                                    <p class="text-muted small mb-2">Giá bán: <strong>450.000đ</strong></p>
+                                    <button class="btn btn-mint btn-sm w-100"><i class="fa-solid fa-cart-shopping"></i> Thêm Vào Giỏ Hàng</button>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="col-md-6">
+                            <div class="card card-custom h-100">
+                                <!-- ẢNH: image/ayaka.jpg -->
+                                <img src="image/ayaka.jpg" class="card-img-top product-img" alt="Trang phục cosplay Kamisato Ayaka">
+                                <div class="card-body">
+                                    <span class="badge badge-pink badge-pulse mb-2">Cho Thuê & Bán</span>
+                                    <h5 class="card-title fw-bold fs-6">Cosplay Anime - Genshin Impact (Kamisato Ayaka)</h5>
+                                    <p class="text-muted small mb-2">Giá thuê: <strong>180.000đ/ngày</strong> | Cọc: 600.000đ</p>
+                                    <a href="product-detail.html?sp=outfit-concert" class="btn btn-mint btn-sm w-100"><i class="fa-solid fa-eye"></i> Xem Chi Tiết & Thuê</a>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="col-md-6">
+                            <div class="card card-custom h-100">
+                                <!-- ẢNH: image/ao-dai.jpg -->
+                                <img src="image/ao-dai.jpg" class="card-img-top product-img" alt="Áo dài cách tân họa tiết hoa sen">
+                                <div class="card-body">
+                                    <span class="badge badge-mint mb-2">Cho Thuê</span>
+                                    <h5 class="card-title fw-bold fs-6">Áo Dài Cách Tân Họa Tiết Hoa Sen</h5>
+                                    <p class="text-muted small mb-2">Giá thuê: <strong>120.000đ/ngày</strong> | Cọc: 400.000đ</p>
+                                    <a href="product-detail.html?sp=ao-dai" class="btn btn-mint btn-sm w-100"><i class="fa-solid fa-eye"></i> Xem Chi Tiết & Thuê</a>
+                                </div>
+                            </div>
+                        </div>
+
+                    </div>
+                </div>
+
+                <!-- Cột phải: bản tin nổi bật -->
+                <div class="col-lg-4">
+                    <h4 class="mb-3 fw-bold text-secondary"><i class="fa-solid fa-comments"></i> Bản Tin MiuCos Nổi Bật</h4>
+
+                    <div class="card card-custom p-3 mb-3">
+                        <div class="d-flex align-items-center mb-2">
+                            <div class="avatar-circle me-2" style="--avatar-bg: #6c757d; color: #ffffff;">U</div>
+                            <span class="fw-semibold small">Bạn muốn tìm đồ hay đăng bài?</span>
+                        </div>
+                        <textarea class="form-control form-control-sm mb-2" rows="2" placeholder="Chia sẻ ảnh outfit, tìm đồ đi concert..." aria-label="Nội dung bài đăng"></textarea>
+                        <button class="btn btn-pink-accent btn-sm"><i class="fa-solid fa-pen-to-square"></i> Đăng Bài Ngay</button>
+                    </div>
+
+                    <div class="card card-custom p-3 mb-3">
+                        <div class="d-flex align-items-center mb-2">
+                            <div class="avatar-circle me-2" style="--avatar-bg: var(--pink-accent);">M</div>
+                            <div>
+                                <h6 class="mb-0 fw-bold small">MiuCos Official</h6>
+                                <small class="text-muted" style="font-size: 11px;">2 giờ trước</small>
+                            </div>
+                        </div>
+                        <p class="small mb-2">Chào mừng các bạn đến với MiuCos! Mới về lô đồ concert cực cháy cho cuối tuần này anh em ơi. 🔥</p>
+                        <div class="d-flex justify-content-between text-muted border-top pt-2 small">
+                            <button type="button" class="news-like"><i class="fa-regular fa-heart text-danger"></i> <span class="like-count">12</span> Thích</button>
+                            <span><i class="fa-regular fa-comment"></i> Bình luận</span>
+                        </div>
+                    </div>
+
+                    <div class="card card-custom p-3 mb-3">
+                        <div class="d-flex align-items-center mb-2">
+                            <div class="avatar-circle me-2" style="--avatar-bg: var(--mint-primary);">K</div>
+                            <div>
+                                <h6 class="mb-0 fw-bold small">Kiều Oanh Cosplay</h6>
+                                <small class="text-muted" style="font-size: 11px;">5 giờ trước</small>
+                            </div>
+                        </div>
+                        <p class="small mb-2">Mới về set Hu Tao bản giới hạn, đủ size S-M-L và có sẵn phụ kiện đi kèm. Ai quan tâm comment mình tư vấn nha! 🔥</p>
+                        <div class="d-flex justify-content-between text-muted border-top pt-2 small">
+                            <button type="button" class="news-like"><i class="fa-regular fa-heart text-danger"></i> <span class="like-count">34</span> Thích</button>
+                            <span><i class="fa-regular fa-comment"></i> 8 Bình luận</span>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+
+        <!-- HẠNG MỤC 1: THUÊ TRANG PHỤC -->
+        <section class="container my-5">
+            <div class="category-frame" id="thue-trang-phuc">
+            <div class="d-flex justify-content-between align-items-center mb-3">
+                <h4 class="fw-bold text-secondary mb-0"><i class="fa-solid fa-hanger"></i> Thuê Trang Phục</h4>
+                <a href="rent-category.html" class="text-decoration-none small fw-bold section-more">Xem tất cả <i class="fa-solid fa-arrow-right"></i></a>
+            </div>
+
+            <div class="cat-scroller">
+                <a href="product-detail.html?sp=thue-hu-tao" class="cat-item">
+                    <div class="cat-img-box"><img src="image/thue-hu-tao.jpg" alt="Cosplay Hu Tao" class="cat-img"></div>
+                    <div class="cat-info"><h6>Cosplay Hu Tao</h6><p class="cat-price-rent">150.000đ/ngày</p></div>
+                </a>
+                <a href="product-detail.html?sp=thue-raiden" class="cat-item">
+                    <div class="cat-img-box"><img src="image/thue-raiden.jpg" alt="Cosplay Raiden Shogun" class="cat-img"></div>
+                    <div class="cat-info"><h6>Cosplay Raiden Shogun</h6><p class="cat-price-rent">180.000đ/ngày</p></div>
+                </a>
+                <a href="product-detail.html?sp=thue-han-phuc" class="cat-item">
+                    <div class="cat-img-box"><img src="image/thue-han-phuc.jpg" alt="Hán phục cổ trang" class="cat-img"></div>
+                    <div class="cat-info"><h6>Hán Phục Cổ Trang</h6><p class="cat-price-rent">130.000đ/ngày</p></div>
+                </a>
+                <a href="product-detail.html?sp=thue-ao-dai-do" class="cat-item">
+                    <div class="cat-img-box"><img src="image/thue-ao-dai-do.jpg" alt="Áo dài truyền thống đỏ" class="cat-img"></div>
+                    <div class="cat-info"><h6>Áo Dài Truyền Thống Đỏ</h6><p class="cat-price-rent">120.000đ/ngày</p></div>
+                </a>
+                <a href="product-detail.html?sp=thue-concert-neon" class="cat-item">
+                    <div class="cat-img-box"><img src="image/thue-concert-neon.jpg" alt="Outfit concert neon" class="cat-img"></div>
+                    <div class="cat-info"><h6>Outfit Concert Neon</h6><p class="cat-price-rent">200.000đ/ngày</p></div>
+                </a>
+                <a href="product-detail.html?sp=thue-nahida" class="cat-item">
+                    <div class="cat-img-box"><img src="image/thue-nahida.jpg" alt="Cosplay Nahida" class="cat-img"></div>
+                    <div class="cat-info"><h6>Cosplay Nahida</h6><p class="cat-price-rent">150.000đ/ngày</p></div>
+                </a>
+            </div>
+            </div>
+        </section>
+
+        <!-- HẠNG MỤC 2: MUA TRANG PHỤC -->
+        <section class="container my-5">
+            <div class="category-frame" id="mua-trang-phuc">
+            <div class="d-flex justify-content-between align-items-center mb-3">
+                <h4 class="fw-bold text-secondary mb-0"><i class="fa-solid fa-bag-shopping"></i> Mua Trang Phục</h4>
+                <a href="buy-category.html" class="text-decoration-none small fw-bold section-more">Xem tất cả <i class="fa-solid fa-arrow-right"></i></a>
+            </div>
+
+            <div class="cat-scroller">
+                <a href="product-detail.html?sp=mua-zhongli" class="cat-item">
+                    <div class="cat-img-box"><img src="image/mua-zhongli.jpg" alt="Bộ cosplay Zhongli" class="cat-img"></div>
+                    <div class="cat-info"><h6>Bộ Cosplay Zhongli</h6><p>Giá bán: <strong>890.000đ</strong></p></div>
+                </a>
+                <a href="product-detail.html?sp=mua-ao-khoac-concert" class="cat-item">
+                    <div class="cat-img-box"><img src="image/mua-ao-khoac-concert.jpg" alt="Áo khoác concert lấp lánh" class="cat-img"></div>
+                    <div class="cat-info"><h6>Áo Khoác Concert Lấp Lánh</h6><p>Giá bán: <strong>450.000đ</strong></p></div>
+                </a>
+                <a href="product-detail.html?sp=mua-ao-dai-cuoi" class="cat-item">
+                    <div class="cat-img-box"><img src="image/mua-ao-dai-cuoi.jpg" alt="Áo dài cưới cải tiến" class="cat-img"></div>
+                    <div class="cat-info"><h6>Áo Dài Cưới Cải Tiến</h6><p>Giá bán: <strong>2.500.000đ</strong></p></div>
+                </a>
+                <a href="product-detail.html?sp=mua-co-trang" class="cat-item">
+                    <div class="cat-img-box"><img src="image/mua-co-trang.jpg" alt="Váy cổ trang thiếu nữ" class="cat-img"></div>
+                    <div class="cat-info"><h6>Váy Cổ Trang Thiếu Nữ</h6><p>Giá bán: <strong>620.000đ</strong></p></div>
+                </a>
+                <a href="product-detail.html?sp=mua-idol" class="cat-item">
+                    <div class="cat-img-box"><img src="image/mua-idol.jpg" alt="Bộ đồng phục idol" class="cat-img"></div>
+                    <div class="cat-info"><h6>Bộ Đồng Phục Idol</h6><p>Giá bán: <strong>780.000đ</strong></p></div>
+                </a>
+                <a href="product-detail.html?sp=mua-hanbok" class="cat-item">
+                    <div class="cat-img-box"><img src="image/mua-hanbok.jpg" alt="Trang phục Hanbok nữ" class="cat-img"></div>
+                    <div class="cat-info"><h6>Trang Phục Hanbok Nữ</h6><p>Giá bán: <strong>1.100.000đ</strong></p></div>
+                </a>
+            </div>
+            </div>
+        </section>
+
+        <!-- HẠNG MỤC 3: PHỤ KIỆN HÓA TRANG -->
+        <section class="container my-5">
+            <div class="category-frame" id="phu-kien-hoa-trang">
+            <div class="d-flex justify-content-between align-items-center mb-3">
+                <h4 class="fw-bold text-secondary mb-0"><i class="fa-solid fa-gem"></i> Phụ Kiện Hóa Trang</h4>
+                <a href="accessory-category.html" class="text-decoration-none small fw-bold section-more">Xem tất cả <i class="fa-solid fa-arrow-right"></i></a>
+            </div>
+
+            <div class="cat-scroller">
+                <a href="product-detail.html?sp=phukien-wig-bach-kim" class="cat-item">
+                    <div class="cat-img-box"><img src="image/phukien-wig-bach-kim.jpg" alt="Wig tóc bạch kim" class="cat-img"></div>
+                    <div class="cat-info"><h6>Wig Tóc Bạch Kim</h6><p>Giá thuê: <strong>80.000đ/ngày</strong></p></div>
+                </a>
+                <a href="product-detail.html?sp=phukien-kiem" class="cat-item">
+                    <div class="cat-img-box"><img src="image/phukien-kiem.jpg" alt="Kiếm đạo cụ cosplay" class="cat-img"></div>
+                    <div class="cat-info"><h6>Kiếm Đạo Cụ Cosplay</h6><p>Giá thuê: <strong>60.000đ/ngày</strong></p></div>
+                </a>
+                <a href="product-detail.html?sp=phukien-kinh" class="cat-item">
+                    <div class="cat-img-box"><img src="image/phukien-kinh.jpg" alt="Kính cosplay cổ điển" class="cat-img"></div>
+                    <div class="cat-info"><h6>Kính Cosplay Cổ Điển</h6><p>Giá bán: <strong>120.000đ</strong></p></div>
+                </a>
+                <a href="product-detail.html?sp=phukien-vong-co" class="cat-item">
+                    <div class="cat-img-box"><img src="image/phukien-vong-co.jpg" alt="Vòng cổ trang" class="cat-img"></div>
+                    <div class="cat-info"><h6>Vòng Cổ Trang</h6><p>Giá bán: <strong>95.000đ</strong></p></div>
+                </a>
+                <a href="product-detail.html?sp=phukien-mu-phu-thuy" class="cat-item">
+                    <div class="cat-img-box"><img src="image/phukien-mu-phu-thuy.jpg" alt="Mũ phù thủy" class="cat-img"></div>
+                    <div class="cat-info"><h6>Mũ Phù Thủy</h6><p>Giá thuê: <strong>40.000đ/ngày</strong></p></div>
+                </a>
+                <a href="product-detail.html?sp=phukien-giay" class="cat-item">
+                    <div class="cat-img-box"><img src="image/phukien-giay.jpg" alt="Giày cosplay cao cổ" class="cat-img"></div>
+                    <div class="cat-info"><h6>Giày Cosplay Cao Cổ</h6><p>Giá thuê: <strong>70.000đ/ngày</strong></p></div>
+                </a>
+            </div>
+            </div>
+        </section>
+
+        <!-- KHU VỰC CỘNG ĐỒNG FEED -->
+        <section class="container my-5" id="cong-dong-feed">
+            <div class="d-flex justify-content-between align-items-center mb-3">
+                <h4 class="fw-bold text-secondary mb-0"><i class="fa-solid fa-users"></i> Cộng Đồng Feed</h4>
+                <a href="community-feed.html" class="text-decoration-none small fw-bold section-more">Xem tất cả <i class="fa-solid fa-arrow-right"></i></a>
+            </div>
+
+            <div class="row justify-content-center">
+                <div class="col-lg-8">
+
+                    <!-- BÀI VIẾT 1 -->
+                    <article class="card card-custom post-card">
+                        <div class="d-flex align-items-center mb-2">
+                            <div class="avatar-circle me-2" style="--avatar-bg: #fbc4cf;">L</div>
+                            <div>
+                                <h6 class="mb-0 fw-bold">Linh Cosplay</h6>
+                                <small class="text-muted">1 giờ trước · <i class="fa-solid fa-earth-asia"></i></small>
+                            </div>
+                        </div>
+
+                        <p class="post-text mb-2">Mình vừa đi concert cuối tuần ở SVĐ Phú Thọ với bộ đồ thuê từ MiuCos, ánh sáng lấp lánh cực kỳ! Ai cần tham khảo outfit thì inbox mình nha ✨</p>
+
+                        <!-- ẢNH: image/feed-concert-linh.jpg -->
+                        <img src="image/feed-concert-linh.jpg" alt="Linh Cosplay mặc outfit concert" class="post-img mb-2">
+
+                        <div class="d-flex justify-content-between align-items-center post-stats py-2 border-bottom">
+                            <span class="d-flex align-items-center gap-2">
+                                <span class="reaction-icons"><span><i class="fa-solid fa-thumbs-up"></i></span><span><i class="fa-solid fa-heart"></i></span></span> <span class="like-count">248</span>
+                            </span>
+                            <span>36 bình luận · 5 chia sẻ</span>
+                        </div>
+
+                        <div class="d-flex py-1 border-bottom mb-2">
+                            <button class="btn post-action btn-sm"><i class="fa-regular fa-thumbs-up me-1"></i> Thích</button>
+                            <button class="btn post-action btn-sm"><i class="fa-regular fa-comment me-1"></i> Bình luận</button>
+                            <button class="btn post-action btn-sm"><i class="fa-solid fa-share me-1"></i> Chia sẻ</button>
+                        </div>
+
+                        <div class="pt-1">
+                            <div class="top-comment-label"><i class="fa-solid fa-star"></i> Bình luận nổi bật</div>
+
+                            <div class="comment-row">
+                                <div class="avatar-circle small" style="--avatar-bg: #cbd5e1;">M</div>
+                                <div class="flex-grow-1">
+                                    <div class="comment-bubble">
+                                        <strong>Minh Tú</strong>
+                                        <p>Set này đẹp quá, bạn thuê ở đâu vậy?</p>
+                                        <span class="comment-likes"><i class="fa-solid fa-thumbs-up"></i> <span class="like-count">42</span></span>
+                                    </div>
+                                    <div class="comment-meta"><button>Thích</button> · <button>Phản hồi</button> · 50 phút</div>
+                                </div>
+                            </div>
+
+                            <div class="comment-row">
+                                <div class="avatar-circle small" style="--avatar-bg: #d8f3f1;">H</div>
+                                <div class="flex-grow-1">
+                                    <div class="comment-bubble">
+                                        <strong>Hà My</strong>
+                                        <p>Mình thuê bộ này tuần trước rồi, form rất chuẩn luôn!</p>
+                                        <span class="comment-likes"><i class="fa-solid fa-thumbs-up"></i> <span class="like-count">19</span></span>
+                                    </div>
+                                    <div class="comment-meta"><button>Thích</button> · <button>Phản hồi</button> · 30 phút</div>
+                                </div>
+                            </div>
+
+                            <div class="comment-more">Xem thêm 34 bình luận</div>
+                        </div>
+                    </article>
+
+                    <!-- BÀI VIẾT 2 -->
+                    <article class="card card-custom post-card">
+                        <div class="d-flex align-items-center mb-2">
+                            <div class="avatar-circle me-2" style="--avatar-bg: #c7d2fe;">H</div>
+                            <div>
+                                <h6 class="mb-0 fw-bold">Hoàng Nam Cosplay</h6>
+                                <small class="text-muted">3 giờ trước · <i class="fa-solid fa-earth-asia"></i></small>
+                            </div>
+                        </div>
+
+                        <p class="post-text mb-3">Ai có wig tóc bạc giống Zhongli hoặc Kamisato Ayaka cho mình mượn không? Mình cần cho buổi chụp ảnh cuối tuần, sẵn sàng trả phí 🙏</p>
+
+                        <div class="d-flex justify-content-between align-items-center post-stats py-2 border-bottom">
+                            <span class="d-flex align-items-center gap-2">
+                                <span class="reaction-icons"><span><i class="fa-solid fa-thumbs-up"></i></span><span><i class="fa-solid fa-heart"></i></span></span> <span class="like-count">86</span>
+                            </span>
+                            <span>21 bình luận · 2 chia sẻ</span>
+                        </div>
+
+                        <div class="d-flex py-1 border-bottom mb-2">
+                            <button class="btn post-action btn-sm"><i class="fa-regular fa-thumbs-up me-1"></i> Thích</button>
+                            <button class="btn post-action btn-sm"><i class="fa-regular fa-comment me-1"></i> Bình luận</button>
+                            <button class="btn post-action btn-sm"><i class="fa-solid fa-share me-1"></i> Chia sẻ</button>
+                        </div>
+
+                        <div class="pt-1">
+                            <div class="top-comment-label"><i class="fa-solid fa-star"></i> Bình luận nổi bật</div>
+
+                            <div class="comment-row">
+                                <div class="avatar-circle small" style="--avatar-bg: var(--pink-accent);">A</div>
+                                <div class="flex-grow-1">
+                                    <div class="comment-bubble">
+                                        <strong>MiuCos Official</strong>
+                                        <p>Shop có wig tóc bạc đó bạn, vào mục Phụ Kiện Hóa Trang xem nhé!</p>
+                                        <span class="comment-likes"><i class="fa-solid fa-thumbs-up"></i> <span class="like-count">27</span></span>
+                                    </div>
+                                    <div class="comment-meta"><button>Thích</button> · <button>Phản hồi</button> · 2 giờ</div>
+                                </div>
+                            </div>
+
+                            <div class="comment-row">
+                                <div class="avatar-circle small" style="--avatar-bg: #fde68a;">N</div>
+                                <div class="flex-grow-1">
+                                    <div class="comment-bubble">
+                                        <strong>Ngọc Diệp</strong>
+                                        <p>Ayaka mình có sẵn, pm mình nha bạn!</p>
+                                        <span class="comment-likes"><i class="fa-solid fa-thumbs-up"></i> <span class="like-count">9</span></span>
+                                    </div>
+                                    <div class="comment-meta"><button>Thích</button> · <button>Phản hồi</button> · 1 giờ</div>
+                                </div>
+                            </div>
+
+                            <div class="comment-more">Xem thêm 19 bình luận</div>
+                        </div>
+                    </article>
+
+                    <!-- BÀI VIẾT 3 -->
+                    <article class="card card-custom post-card">
+                        <div class="d-flex align-items-center mb-2">
+                            <div class="avatar-circle me-2" style="--avatar-bg: #bbf7d0;">T</div>
+                            <div>
+                                <h6 class="mb-0 fw-bold">Thảo Anh</h6>
+                                <small class="text-muted">Hôm qua · <i class="fa-solid fa-earth-asia"></i></small>
+                            </div>
+                        </div>
+
+                        <p class="post-text mb-2">Review nhanh áo dài cách tân thuê ở MiuCos: đường may chắc, vải mềm, có bảng size đo chuẩn từng số. Chụp ảnh kỷ yếu đẹp lắm 🌸</p>
+
+                        <!-- ẢNH: image/feed-ao-dai-thao.jpg -->
+                        <img src="image/feed-ao-dai-thao.jpg" alt="Thảo Anh mặc áo dài cách tân" class="post-img mb-2">
+
+                        <div class="d-flex justify-content-between align-items-center post-stats py-2 border-bottom">
+                            <span class="d-flex align-items-center gap-2">
+                                <span class="reaction-icons"><span><i class="fa-solid fa-thumbs-up"></i></span><span><i class="fa-solid fa-heart"></i></span></span> <span class="like-count">512</span>
+                            </span>
+                            <span>74 bình luận · 16 chia sẻ</span>
+                        </div>
+
+                        <div class="d-flex py-1 border-bottom mb-2">
+                            <button class="btn post-action btn-sm"><i class="fa-regular fa-thumbs-up me-1"></i> Thích</button>
+                            <button class="btn post-action btn-sm"><i class="fa-regular fa-comment me-1"></i> Bình luận</button>
+                            <button class="btn post-action btn-sm"><i class="fa-solid fa-share me-1"></i> Chia sẻ</button>
+                        </div>
+
+                        <div class="pt-1">
+                            <div class="top-comment-label"><i class="fa-solid fa-star"></i> Bình luận nổi bật</div>
+
+                            <div class="comment-row">
+                                <div class="avatar-circle small" style="--avatar-bg: #fecdd3;">Q</div>
+                                <div class="flex-grow-1">
+                                    <div class="comment-bubble">
+                                        <strong>Quỳnh Chi</strong>
+                                        <p>Mình cũng định thuê bộ này cho lễ tốt nghiệp, cảm ơn bạn đã review nha!</p>
+                                        <span class="comment-likes"><i class="fa-solid fa-thumbs-up"></i> <span class="like-count">61</span></span>
+                                    </div>
+                                    <div class="comment-meta"><button>Thích</button> · <button>Phản hồi</button> · 4 giờ</div>
+                                </div>
+                            </div>
+
+                            <div class="comment-row">
+                                <div class="avatar-circle small" style="--avatar-bg: #ddd6fe;">B</div>
+                                <div class="flex-grow-1">
+                                    <div class="comment-bubble">
+                                        <strong>Bảo Long</strong>
+                                        <p>Đúng là bảng size đo chuẩn nên khỏi lo chọn sai size.</p>
+                                        <span class="comment-likes"><i class="fa-solid fa-thumbs-up"></i> <span class="like-count">15</span></span>
+                                    </div>
+                                    <div class="comment-meta"><button>Thích</button> · <button>Phản hồi</button> · 3 giờ</div>
+                                </div>
+                            </div>
+
+                            <div class="comment-more">Xem thêm 72 bình luận</div>
+                        </div>
+                    </article>
+
+                </div>
+            </div>
+        </section>
+
+    </main>
+
+    <!-- FOOTER -->
+    <footer class="footer-soft mt-auto">
+        <div class="container">
+            <div class="row g-4">
+
+                <div class="col-lg-4 col-md-6">
+                    <div class="d-flex align-items-center gap-2 mb-3">
+                        <img src="image/logodoanweb.png" alt="MiuCos Logo" class="footer-logo-img">
+                        <span class="fs-4 fw-bold text-dark">MiuCos Store</span>
+                    </div>
+                    <p class="small text-secondary mb-3">
+                        Hệ thống nền tảng kết nối cho thuê và mua bán trang phục Cosplay, Concert, Cổ trang và Sự kiện hàng đầu dành cho giới trẻ.
+                    </p>
+                </div>
+
+                <div class="col-lg-4 col-md-6">
+                    <h5 class="fw-bold mb-3 border-bottom border-2 pb-2" style="width: fit-content; border-color: var(--pink-accent) !important;">Chính Sách & Hỗ Trợ</h5>
+                    <ul class="list-unstyled small d-flex flex-column gap-2 mb-0">
+                        <li><a href="#"><i class="fa-solid fa-angle-right me-2 text-mint"></i>Quy định thuê đồ & Đặt cọc</a></li>
+                        <li><a href="#"><i class="fa-solid fa-angle-right me-2 text-mint"></i>Hướng dẫn đo Size chuẩn</a></li>
+                        <li><a href="#"><i class="fa-solid fa-angle-right me-2 text-mint"></i>Chính sách dành cho Đối tác gian hàng</a></li>
+                        <li><a href="#"><i class="fa-solid fa-angle-right me-2 text-mint"></i>Câu hỏi thường gặp (FAQ)</a></li>
+                    </ul>
+                </div>
+
+                <div class="col-lg-4 col-md-12">
+                    <h5 class="fw-bold mb-3 border-bottom border-2 pb-2" style="width: fit-content; border-color: var(--pink-accent) !important;">Kết Nối Với MiuCos</h5>
+                    <div class="d-flex gap-3 mb-3">
+                        <a href="#" class="footer-social-icon" title="Facebook" aria-label="Facebook"><i class="fa-brands fa-facebook"></i></a>
+                        <a href="#" class="footer-social-icon" title="Instagram" aria-label="Instagram"><i class="fa-brands fa-instagram"></i></a>
+                        <a href="#" class="footer-social-icon" title="TikTok" aria-label="TikTok"><i class="fa-brands fa-tiktok"></i></a>
+                    </div>
+                    <p class="small text-secondary mb-0">
+                        <i class="fa-solid fa-headset me-2 text-pink"></i>Hotline hỗ trợ: <strong class="text-dark">09xx-xxx-xxx</strong>
+                    </p>
+                </div>
+
+            </div>
+
+            <hr class="my-4" style="border-color: #cbd5e1;">
+
+            <div class="text-center small text-muted">
+                © 2026 MiuCos Store - Đồ án thiết kế trang web thương mại điện tử cho thuê trang phục.
+            </div>
+        </div>
+    </footer>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="script.js"></script>
+</body>
+</html>
